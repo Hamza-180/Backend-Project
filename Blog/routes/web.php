@@ -23,7 +23,11 @@ Route::get('/', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard'); */
 
-Route::get('/home', [HomeController::class,'index'])->name( 'home');
+Route::get('/home', [HomeController::class,'index'])
+->middleware('auth')->name( 'home');
+
+route::get('post', [HomeController::class,'post'])->middleware(
+    [    'auth'])->name('admin');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
