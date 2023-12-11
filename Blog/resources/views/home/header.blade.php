@@ -34,9 +34,20 @@
                      <li><a href="about.html">About</a></li>
                      <li><a href="services.html">Services</a></li>
                      <li><a href="blog.html">Blog</a></li>
+
+                     @if (Route::has('login'))
+
+                     @auth
+                     <li><a href="{{route('home')}}">Home</a></li>
+                    @else
                      <li><a href="{{route('login')}}">Login</a></li>
+
+                     
                      <li><a href="{{route('register')}}">Register</a></li>
-                  </ul>
+                @endauth
+                
+                  @endif
+                </ul>
                </div>
             </div>
          </div>
