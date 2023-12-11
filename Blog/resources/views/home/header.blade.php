@@ -1,4 +1,4 @@
-<div class="header_main">
+  <div class="header_main">
             <div class="mobile_menu">
                <nav class="navbar navbar-expand-lg navbar-light bg-light">
                   <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
@@ -8,7 +8,7 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                      <ul class="navbar-nav">
                         <li class="nav-item">
-                           <a class="nav-link" href="homepage">Home</a>
+                           <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="about.html">About</a>
@@ -34,7 +34,8 @@
                      <li><a href="about.html">About</a></li>
                      <li><a href="services.html">Services</a></li>
                      <li><a href="blog.html">Blog</a></li>
-                     <li><a href="contact.html">Contact us</a></li>
+                     <li><a href="{{route('login')}}">Login</a></li>
+                     <li><a href="{{route('register')}}">Register</a></li>
                   </ul>
                </div>
             </div>
