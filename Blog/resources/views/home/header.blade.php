@@ -38,19 +38,14 @@
                      @if (Route::has('login'))
 
                      @auth
-                    <li>
-                    <x-app-layout>
-
-                    </x-app-layout>
-                    </li>
-
+                     <li><a href="{{route('home')}}">Home</a></li>
                     @else
                      <li><a href="{{route('login')}}">Login</a></li>
 
                      
                      <li><a href="{{route('register')}}">Register</a></li>
                 @endauth
-
+                
                   @endif
                 </ul>
                </div>
